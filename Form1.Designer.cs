@@ -62,10 +62,12 @@ namespace PizzaOrderApp
             this.label11 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -428,11 +430,26 @@ namespace PizzaOrderApp
             this.label15.Size = new System.Drawing.Size(0, 20);
             this.label15.TabIndex = 20;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.numericUpDown1.Location = new System.Drawing.Point(477, 356);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(110, 44);
+            this.numericUpDown1.TabIndex = 21;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 684);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.label11);
@@ -454,7 +471,6 @@ namespace PizzaOrderApp
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-           
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -463,6 +479,7 @@ namespace PizzaOrderApp
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +521,7 @@ namespace PizzaOrderApp
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

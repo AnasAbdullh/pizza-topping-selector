@@ -78,7 +78,7 @@ namespace PizzaOrderApp
             return 0;
         }
 
-      
+
         private int ClacluteTotalPrice()
         {
             return GetSelectSizePrice() + GetSelectCrustPrice() + ClacluteToppingPrice();
@@ -87,7 +87,7 @@ namespace PizzaOrderApp
       
         private void UpdateTotalPrice()
         {
-            lblTotalPrice.Text = $"${ClacluteTotalPrice()}";
+            lblTotalPrice.Text = $"${ClacluteTotalPrice() * numericUpDown1.Value}";
         }
 
      
@@ -172,6 +172,9 @@ namespace PizzaOrderApp
             label10.Text = "Eat In";
         }
 
-        
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTotalPrice();
+        }
     }
 }
